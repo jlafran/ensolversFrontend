@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ServerConfig from "../config/serverConfig";
 import FormLists from "./FormList";
 const Lists = () => {
     const [todos, setTodos] = useState()
@@ -102,8 +101,7 @@ const Lists = () => {
                 {!todos ? "Cargando..." :
                 todos.map(RenderCard)}
 
-                <FormLists/>
-                
+                <FormLists url="http://localhost:8080/api/listItems"/>
             </div>
         </>
     )

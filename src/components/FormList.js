@@ -1,11 +1,13 @@
 import { useState } from "react";
-const FormLists=()=> {
+const FormLists=(props)=> {
     const [name, setName] = useState("");
+    const {url}=props;
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        if(name!=""&&name!=null){
         try{
-            let res = await fetch("http://localhost:8080/api/listItems", {
+            let res = await fetch(url, {
               method: "POST",
               headers: {
                 Accept: 'application/json',
@@ -24,8 +26,11 @@ const FormLists=()=> {
         catch (err) {
             console.log(err);
         }
-        
       }
+      else{
+        alert(`Is empty`)
+      }
+    }
 
 
     return (
