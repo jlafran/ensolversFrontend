@@ -81,29 +81,29 @@ const Item = (props) => {
           }
 
           return(
-                <div >
-                    <h4 key={index} > {item.name}</h4>
+                <div className="wrapper-item-card">
+                    <h4 key={index} className="medium" > {item.name}</h4>
 
                     <form key={index} onSubmit={handleSubmit}>
-                        <label>Edit Item:
-                            <input type="text" name="name" value={item.name} onChange={
+                        <label className="regular">Edit Name:
+                            <input type="text" className="input" name="name" value={item.name} onChange={
                                 updateFieldChanged(index)}/>
-                            <input type="submit" />
+                            <input  className="regular button" type="submit" value={"Change"} />
                         </label>
                     </form>
-                    <button onClick={handleDelete} >Finished</button>
+                    <button className="semibold "onClick={handleDelete} >Finished</button>
                 </div>
           )
     }
 
     return (
         <>
-            <div>
-                <h1>{folder.name}</h1>
+            <div className="items">
+                <h1 className="bold" >List: {folder.name}</h1>
                 {!listItems ? "Cargando..." :
                 listItems.map(RenderCard)}
                 <FormLists url={`http://localhost:8080/api/listItems/${id}/item`}/>
-                <button ><a href="/">Back</a></button>
+                <button className="delete"><a href="/">Back</a></button>
             </div>
         </>
     )

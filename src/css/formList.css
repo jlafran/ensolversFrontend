@@ -1,0 +1,33 @@
+.wrapper-form{
+    padding: 2vmin 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.wrapper-form label{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2vmax;
+}
+
+.wrapper-form  label input.input{
+    margin: 0 1.5vw;
+    font-size: 1.2vmax;
+}
+
+.wrapper-form  .button{
+    font-size: 1vmax;
+    padding: .4rem .6rem;
+    border-radius: 6px;
+    background-color: #69C759;
+    color: azure;
+}
+.wrapper-form  button{
+    font-size: .8vmax;
+    padding: .29rem .5rem;
+    border-radius: 6px;
+    background-color: #ff4444 ;
+    
+}

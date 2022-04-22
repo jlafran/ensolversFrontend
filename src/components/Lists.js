@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FormLists from "./FormList";
+import "../css/items.css"
 const Lists = () => {
     const [todos, setTodos] = useState()
 
@@ -79,16 +80,16 @@ const Lists = () => {
         }
 
           return(
-                <div >
-                    <h4 key={index} > <Link to={{pathname: '/items',state:{todo}}} >{todo.name}</Link></h4>
+                <div className="wrapper-list-card" >
+                    <h2 className="medium" key={index} > <Link to={{pathname: '/items',state:{todo}}} >{todo.name}</Link></h2>
                     <form key={index} onSubmit={handleSubmit}>
-                        <label>Edit Name:
-                            <input type="text" name="name" value={todo.name} onChange={
+                        <label className="regular">Edit Name:
+                            <input type="text" className="input" name="name" value={todo.name} onChange={
                                 updateFieldChanged(index)}/>
-                            <input type="submit" />
+                            <input className="regular button" type="submit" value={"Change"} />
                         </label>
                     </form>
-                    <button onClick={handleDelete} >Delete</button>
+                    <button className="semibold" onClick={handleDelete} >Delete</button>
                 </div>
           )
     }
@@ -96,8 +97,8 @@ const Lists = () => {
 
     return (
         <>
-            <div>
-                <h1>To-Do List</h1>
+            <div className="lists">
+                <h1 className="bold">Choose a To-Do List</h1>
                 {!todos ? "Cargando..." :
                 todos.map(RenderCard)}
 

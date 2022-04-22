@@ -13,44 +13,45 @@
       padding: 0px;
       overflow-x: hidden; 
   }
-
-  .lists{
+  h1{
+      font-size: 3vmax;
+      padding-bottom: 2vmin;
+  }
+.items{
     margin-left: 2vmin;
     margin-top: 4vh;
 }
 
-
-.wrapper-list-card{
+.wrapper-item-card{
     padding: 2vmin 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
     width: 50%;
 }
 
-.wrapper-list-card h2{
-    font-size: 2vmax;
+.wrapper-item-card h4{
+    font-size: 1.6vmax;
 }
 
-.wrapper-list-card form label{
-    display: flex;
+.wrapper-item-card form label{
     justify-content: space-around;
     font-size: 1.2vmax;
 }
 
-.wrapper-list-card form label input.input{
+.wrapper-item-card form label input.input{
     margin: 0 1.5vw;
     font-size: 1.2vmax;
 }
 
-.wrapper-list-card form label .button{
+.wrapper-item-card form label .button{
     font-size: .8vmax;
     padding: .29rem .5rem;
     border-radius: 6px;
     background-color: #f2bf6c;
 }
-.wrapper-list-card  button{
+.wrapper-item-card  button{
     font-size: .8vmax;
     padding: .29rem .5rem;
     border-radius: 6px;
@@ -58,3 +59,16 @@
     
 }
 
+button.delete{
+    margin-top: 2vmin;
+    font-size: 1.4vmax;
+    padding: .2rem .4rem;
+    border-radius: 6px;
+    background-color: #465DFF ;
+}
+
+button.delete a{
+    color: azure;
+    text-decoration: none;
+    
+}

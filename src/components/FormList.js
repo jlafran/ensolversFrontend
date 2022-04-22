@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../css/formList.css"
 const FormLists=(props)=> {
     const [name, setName] = useState("");
     const {url}=props;
@@ -35,15 +36,15 @@ const FormLists=(props)=> {
 
     return (
 
-      <form onSubmit={handleSubmit}>
-        <label>Enter your name:
+      <form className="wrapper-form" onSubmit={handleSubmit}>
+        <label className="regular">Add new:
 
           <input type="text" 
+          className="input"
             value={name}
             onChange={(e) => setName(e.target.value)} />
-
         </label>
-        <input type="submit" />
+        <input className="regular button" type="submit" />
       </form>
 
     )
